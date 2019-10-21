@@ -4,26 +4,26 @@
  *--------------------------------------------------------------------------------------------*/
 syntax = "proto3";
 
-import "Heads/ClientInfo.proto";
+import "Heads/HeadInfo.proto";
 
 package dolittle.heads.management;
 
 option csharp_namespace = "Dolittle.Heads.Management";
 
 
-message ConnectedClientsRequest {
+message ConnectedHeadsRequest {
 }
 
-message ConnectedClient {
-    ClientInfo Client = 1;
+message ConnectedHead {
+    HeadInfo Head = 1;
     int64 ConnectionTime = 2;
 }
 
-message ConnectedClientsResponse {
-    repeated ConnectedClient Clients = 1;
+message ConnectedHeadsResponse {
+    repeated ConnectedHead Heads = 1;
 }
 
-// Represents the Client service
-service Clients {
-    rpc GetConnectedClients(ConnectedClientsRequest) returns(ConnectedClientsResponse) {}
+// Represents the Head service
+service Heads {
+    rpc GetConnectedHeads(ConnectedHeadsRequest) returns(ConnectedHeadsResponse) {}
 }

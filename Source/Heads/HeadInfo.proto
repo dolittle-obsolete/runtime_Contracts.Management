@@ -6,10 +6,10 @@ syntax = "proto3";
 
 package dolittle.heads.management;
 
-option csharp_namespace = "Dolittle.heads.Management";
+option csharp_namespace = "Dolittle.Heads.Management";
 
-message ClientInfo {
-    bytes clientId = 1;
+message HeadInfo {
+    bytes headId = 1;
     string host = 2;
     int32 port = 3;
     string runtime = 4;
